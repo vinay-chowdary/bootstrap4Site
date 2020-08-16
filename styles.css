@@ -1,6 +1,9 @@
 nav.navbar button.navbar-toggler:focus {
   outline: none;
 }
+.row-content {
+  margin: 3rem auto;
+}
 .footer .row {
   margin-bottom: 2rem;
 }

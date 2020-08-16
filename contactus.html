@@ -29,6 +29,7 @@
   <body>
     <nav class="navbar navbar-dark navbar-expand-lg bg-primary fixed-top">
       <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,7 +38,6 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Navbar</a>
         <div class="collapse navbar-collapse" id="Navbar">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -127,7 +127,112 @@
           <h3>Send us your Feedback</h3>
         </div>
         <div class="col-12 col-md-9">
-          Form goes here
+          <form action="#">
+            <div class="form-group row">
+              <label for="firstname" class="col-lg-2 col-form-label"
+                >First Name:</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  class="form-control"
+                  placeholder="first name"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lastname" class="col-lg-2 col-form-label"
+                >Last Name:</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  class="form-control"
+                  placeholder="last name"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="telnum" class="col-lg-2 col-form-label"
+                >Contact tel.</label
+              >
+              <div class="col-5 col-lg-3">
+                <input
+                  type="tel"
+                  name="areacode"
+                  id="areacode"
+                  class="form-control"
+                  placeholder="areacode"
+                />
+              </div>
+              <div class="col-7 col-lg-7">
+                <input
+                  type="tel"
+                  name="telnum"
+                  id="telnum"
+                  class="form-control"
+                  placeholder="phone number"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="email" class="col-lg-2 col-form-label">Email:</label>
+              <div class="col-md-10">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="email id"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-lg-4 offset-lg-2">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    name="approve"
+                    id="approve"
+                    class="form-check-input"
+                  />
+                  <label for="approve" class="form-check-label">
+                    <strong>May we contact you?</strong>
+                  </label>
+                </div>
+              </div>
+              <div class="col-lg-5 offset-lg-1">
+                <select name="select" id="select" style="width: 100%;">
+                  <option value="phone">Tel.</option>
+                  <option value="email">Email</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="feedback" class="col-lg-2 col-form-label"
+                >your Feedback</label
+              >
+              <div class="col-lg-10">
+                <textarea
+                  name="feedback"
+                  id="feedback"
+                  rows="10"
+                  class="form-control"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-lg-2 col-lg-10">
+                <button type="submit" class="btn btn-success">
+                  send feedback
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
         <div class="col-12 col-md"></div>
       </div>
