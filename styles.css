@@ -1,3 +1,9 @@
 nav.navbar button.navbar-toggler:focus {
   outline: none;
 }
+.footer .row {
+  margin-bottom: 2rem;
+}
+.footer.jumbotron {
+  margin-bottom: 0;
+}
