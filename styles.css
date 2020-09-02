@@ -3,6 +3,8 @@ nav.navbar button.navbar-toggler:focus {
 }
 .row-content {
   margin: 3rem auto;
+  border-bottom: 1px ridge;
+  min-height: 300px;
 }
 .footer .row {
   margin-bottom: 2rem;
