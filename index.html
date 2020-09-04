@@ -18,6 +18,24 @@
       crossorigin="anonymous"
     />
 
+    <!-- bootstrap js cdn -->
+    <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -31,8 +49,6 @@
       rel="stylesheet"
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
-
-    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -382,6 +398,14 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+        <div class="btn-group" id="carouselButton">
+          <button class="btn btn-danger btn-sm" id="carousel-pause">
+            <i class="fa fa-pause"></i>
+          </button>
+          <button class="btn btn-danger btn-sm" id="carousel-play">
+            <i class="fa fa-play"></i>
+          </button>
+        </div>
       </div>
       <!-- </div> -->
       <!---------------- carousel end ----------------->
@@ -513,27 +537,22 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+
     <script>
       // data-toggle="tooltip"
       //       data-html="true"
       //       title="Or Call us at <br><strong>+123 4567890</strong>"
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+      // $(document).ready(function () {
+      //   $('[data-toggle="tooltip"]').tooltip();
+      // });
+      $(document).ready(() => {
+        $("#carouselId").carousel({ interval: 1000 });
+        $("#carousel-pause").click(() => {
+          $("#carouselId").carousel("pause");
+        });
+        $("#carousel-play").click(() => {
+          $("#carouselId").carousel("cycle");
+        });
       });
     </script>
   </body>
