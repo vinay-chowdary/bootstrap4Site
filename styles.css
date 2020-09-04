@@ -24,6 +24,9 @@ a:hover {
   color: #000;
   text-decoration: none;
 }
+.carouselContainer {
+  position: relative;
+}
 
 .carousel {
   background: #512dab;
