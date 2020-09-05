@@ -1,0 +1,15 @@
+$dark-color: rgb(80, 0, 134);
+$pale-color: rgb(245, 230, 255);
+
+.modal-header {
+  background: $dark-color;
+  color: #fff;
+  .close {
+    color: #fff;
+  }
+}
+.modal-body {
+  background: $pale-color;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
